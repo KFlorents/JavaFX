@@ -47,8 +47,6 @@ public class App extends Application{
         primaryStage.setTitle("Application");
         primaryStage.setScene(scene);
 
-
-        
         primaryStage.show();
     }
 }
