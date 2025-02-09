@@ -64,7 +64,23 @@ public class App extends Application{
         vBox.setSpacing(15);
         hBox1.setSpacing(15);
         label5.setBorder(new Border(new BorderStroke(Color.BLUE, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
-                
+        
+    /*
+    * Event Handler class for 
+    */
+
+        class ButtonHandler implements EventHandler<ActionEvent> {
+            @Override
+            public void handle(ActionEvent event) 
+            {
+                String firstName = textField1.getText();
+                String lastName = textField2.getText();
+                String legume = textField3.getText();
+                String amount = textField4.getText();
+                label5.setText("Hello " + firstName + " " + lastName + " you chose " + legume + " and you want " + amount + " kilograms");
+                label6.setText("Thank you for your registration, we will contact you soon");   
+            }
+        } 
         //Register the event handler
         btn.setOnAction(new ButtonHandler());
 
@@ -79,19 +95,5 @@ public class App extends Application{
         primaryStage.show();
         
     }
-    /*
-    * Event Handler class for 
-    */
-        class ButtonHandler implements EventHandler<ActionEvent> {
-            @Override
-            public void handle(ActionEvent event) 
-            {
-                String firstName = textField1.getText();
-                String lastName = textField2.getText();
-                String legume = textField3.getText();
-                String amount = textField4.getText();
-                label5.setText("Hello " + firstName + " " + lastName + " you chose " + legume + " and you want " + amount + " kilograms");
-                label6.setText("Thank you for your registration, we will contact you soon");   
-            }
-        }
+       
 }
