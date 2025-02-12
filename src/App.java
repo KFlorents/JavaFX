@@ -1,8 +1,6 @@
 
 import javafx.scene.control.TextField;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -45,7 +43,7 @@ public class App extends Application{
         textField1 = new TextField();
         label2 = new Label("Enter your Last Name");
         label3 = new Label("Chose your legume");
-        label4 = new Label("Enter anounts of kilograms");
+        label4 = new Label("Enter the amounts of kilograms");
         textField3 = new TextField();
         textField2 = new TextField();
         textField4 = new TextField();
