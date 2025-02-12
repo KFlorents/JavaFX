@@ -36,6 +36,7 @@ public class App extends Application{
     {
         launch(args);  
     }
+    @SuppressWarnings("unused")
     @Override
     public void start(Stage primaryStage) throws Exception {
         
@@ -66,23 +67,21 @@ public class App extends Application{
         label5.setBorder(new Border(new BorderStroke(Color.BLUE, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
         
     /*
-    * Event Handler class for 
+    * Event Handler class for registering the user.
     */
-
-        class ButtonHandler implements EventHandler<ActionEvent> {
-            @Override
-            public void handle(ActionEvent event) 
-            {
+        //btn.setOnAction(new EventHandler<ActionEvent>(){
+        btn.setOnAction(event -> {
+          //  @Override
+            //public void handle(ActionEvent event) 
+          //  {
                 String firstName = textField1.getText();
                 String lastName = textField2.getText();
                 String legume = textField3.getText();
                 String amount = textField4.getText();
                 label5.setText("Hello " + firstName + " " + lastName + " you chose " + legume + " and you want " + amount + " kilograms");
                 label6.setText("Thank you for your registration, we will contact you soon");   
-            }
-        } 
-        //Register the event handler
-        btn.setOnAction(new ButtonHandler());
+           // }
+        }); 
 
         VBox.setMargin(vBox, new Insets(20, 20, 20, 20));
         vBox.setPadding(new Insets(15));
